@@ -1,0 +1,4 @@
+##control de version
+#Paquetes
+
+django ==5.1.5
