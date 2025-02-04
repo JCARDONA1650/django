@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+DETALLE
+
+<br>
+<br>
+Titulo:
+<label class=text-blue-700 ">{{post.title}}</label>
+
+<br>
+Contenido:
+<label class=text-blue-700 ">{{post.contents}}</label>
+
+<br>
+<br>
+<form action="{% url 'blog:home' %}" method="get">
+    <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l type="submit">
+    Volver a la página de inicio
+  </button>
+</form>
+
+
+{% endblock content %}
+
+{% block nombre %}{% endblock nombre %}
+

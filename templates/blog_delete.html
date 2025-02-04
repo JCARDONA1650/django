@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+Esta seguro de eliminar el Post?
+<form method="POST">
+{% csrf_token %}
+{{form}}
+<br>
+<button class="bg-transparent hover:bg-red-700 text-red-500 font-semibold hover:text-white py-1 px-2 border border-red-700 hover:border-transparent rounded type="submit"">
+    Delete
+  </button>
+</form>
+
+
+<form action="{% url 'blog:home' %}" method="get">
+    <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l type="submit">
+    Volver a la lista de blogs
+  </button>
+</form>
+
+{% endblock content %}
